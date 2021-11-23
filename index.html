@@ -47,6 +47,11 @@ body {
   z-index: -2;
   }
   
+  #content {
+  display: block;
+  justify-content: center;
+  align-items: center;
+  }
     
   #text {
   font-family: 'Caveat', serif;;
@@ -69,35 +74,26 @@ body {
 
 </style>
 </head>
-<body>
 
+<body>
 <video autoplay muted loop playsinline id="myVideo">
   <source src="https://dm0qx8t0i9gc9.cloudfront.net/watermarks/video/GTYSdDW/videoblocks-4k-timelapse-sequence-of-vancouver-canada-downtown-vancouver-at-night_hub0ulilz__7c52ecc7cdb1c956aaf28d387d9257f3__P360.mp4" type="video/mp4">
   Your browser does not support HTML5 video.
 </video>
 
 <div id="overlay"></div>
-<div id="text">Thank you dear Rob...<br/>big hugs and kisses...<i class="fa fa-heart" style="color:#992600;"></i><br/>Look forward to meeting you here in:</div>
-<div id="countdown"></div>
-
-<center><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3145.604644774317!2d-123.18457169747118!3d49.19667089632452!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54860b348627a39b%3A0xba68ccac86348084!2sVancouver%20International%20Airport!5e0!3m2!1sen!2sca!4v1637613938095!5m2!1sen!2sca" style="border:0;" allowfullscreen="" loading="lazy"></iframe></center>
-
-<p><i class="fa fa-heart" style="color:#992600;"></i> created by Grace <i class="fa fa-heart" style="color:#992600;"></i></p>
-
+          <div id="content">
+                    <div id="text">Thank you dear Rob...<br/>big hugs and kisses...<i class="fa fa-heart" style="color:#992600;"></i><br/>Look forward to meeting you here in:</div>
+                    <div id="countdown"></div>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3145.604644774317!2d-123.18457169747118!3d49.19667089632452!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54860b348627a39b%3A0xba68ccac86348084!2sVancouver%20International%20Airport!5e0!3m2!1sen!2sca!4v1637613938095!5m2!1sen!2sca" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    <p><i class="fa fa-heart" style="color:#992600;"></i> created by Grace <i class="fa fa-heart" style="color:#992600;"></i></p>
+          </div>
 <script>
-
 var countDownDate = new Date("Nov 30, 2021 17:30:00").getTime();
-
-
 var x = setInterval(function() {
-
-  
   var now = new Date().getTime();
-    
-  
   var distance = countDownDate - now;
     
-  
   var days = Math.floor(distance / (1000 * 60 * 60 * 24));
   var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
   var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
