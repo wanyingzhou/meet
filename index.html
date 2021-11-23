@@ -1,0 +1,119 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Grace Meets Rob Countdown</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Caveat">
+
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+          
+<style>
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial;
+  font-size: 1rem;
+  text-align: center;
+  color: white;
+  padding: 60px 30px;
+ }
+
+#myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%; 
+  min-height: 100%;
+  z-index: -100;
+}
+
+
+#overlay {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  display: block;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: -2;
+  }
+  
+    
+  #text {
+  font-family: 'Caveat', serif;;
+  font-size: 3rem;
+  }
+  
+  #countdown {
+  margin-top: 20px;
+  font-size: 4rem;
+  font-weight: bold;
+  }
+  
+    
+  iframe {
+  margin-top: 40px;
+  width: 80%;
+  height: 300px;
+  margin-bottom: 20px;
+  }
+
+</style>
+</head>
+<body>
+
+<video autoplay muted loop id="myVideo">
+  <source src="https://dm0qx8t0i9gc9.cloudfront.net/watermarks/video/GTYSdDW/videoblocks-4k-timelapse-sequence-of-vancouver-canada-downtown-vancouver-at-night_hub0ulilz__7c52ecc7cdb1c956aaf28d387d9257f3__P360.mp4" type="video/mp4">
+  Your browser does not support HTML5 video.
+</video>
+
+<div id="overlay"></div>
+<div id="text">Thank you dear Rob...<br/>big hugs and kisses...<i class="fa fa-heart" style="color:#992600;"></i><br/>Look forward to meeting you here in:</div>
+<div id="countdown"></div>
+
+<center><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3145.604644774317!2d-123.18457169747118!3d49.19667089632452!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54860b348627a39b%3A0xba68ccac86348084!2sVancouver%20International%20Airport!5e0!3m2!1sen!2sca!4v1637613938095!5m2!1sen!2sca" style="border:0;" allowfullscreen="" loading="lazy"></iframe></center>
+
+<p><i class="fa fa-heart" style="color:#992600;"></i> created by Grace <i class="fa fa-heart" style="color:#992600;"></i></p>
+
+<script>
+
+var countDownDate = new Date("Nov 30, 2021 17:30:00").getTime();
+
+
+var x = setInterval(function() {
+
+  
+  var now = new Date().getTime();
+    
+  
+  var distance = countDownDate - now;
+    
+  
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+  
+  document.getElementById("countdown").innerHTML = days + "d " + hours + "h "
+  + minutes + "m " + seconds + "s ";
+    
+   
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("countdown").innerHTML = "WE MEET!!!";
+  }
+}, 1000);
+</script>
+
+</body>
+</html>
