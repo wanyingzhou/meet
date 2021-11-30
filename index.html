@@ -22,7 +22,7 @@ body {
   text-align: center;
   color: white;
   padding: 60px 30px;
-  }
+ }
 
 #myVideo {
   position: fixed;
@@ -59,59 +59,58 @@ body {
   }
   
   #countdown {
-  margin-top: 20px;
+  margin-top: 30px;
   font-size: 4rem;
   font-weight: bold;
   }
   
     
-  #map {
-  margin-top: 20px;
+  iframe {
+  margin-top: 40px;
   width: 90%;
-  height: 200px;
+  height: 300px;
   margin-bottom: 20px;
   }
   
-  #ytplayer {
-  margin-top: 20px;
-  width: 90%;
-  height: 400px;
-  margin-bottom: 20px;
+  
+.glow {
+  font-size: 80px;
+  color: #fff;
+  text-align: center;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes glow {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
   }
   
-  #lyrics {
-  font-family: 'Caveat', serif;;
-  font-size: 2rem;
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
   }
+}
 
 </style>
 </head>
 
 <body>
 <video autoplay muted loop playsinline id="myVideo">
-  <source src="https://cdn.videvo.net/videvo_files/video/free/2020-06/large_watermarked/Grass_sways_in_the_wind_changing_focus_on_the_lilac_bushes_1593466029_preview.mp4" type="video/mp4">
+  <source src="https://dm0qx8t0i9gc9.cloudfront.net/watermarks/video/GTYSdDW/videoblocks-4k-timelapse-sequence-of-vancouver-canada-downtown-vancouver-at-night_hub0ulilz__7c52ecc7cdb1c956aaf28d387d9257f3__P360.mp4" type="video/mp4">
   Your browser does not support HTML5 video.
 </video>
 
 <div id="overlay"></div>
           <div id="content">
 
+<audio autoplay loop controls style="display: block; margin-bottom: 20px;">
+  <source src="audio.mp3" type="audio/mp3">
+</audio>
 
-
-                    <div id="text">Thank you dear Rob...<br/>big hugs and kisses...<i class="fa fa-heart" style="color:#992600;"></i><br/>Look forward to meeting you here in:</div>
-                    <div id="countdown"></div>
-                    <iframe id="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3145.604644774317!2d-123.18457169747118!3d49.19667089632452!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54860b348627a39b%3A0xba68ccac86348084!2sVancouver%20International%20Airport!5e0!3m2!1sen!2sca!4v1637613938095!5m2!1sen!2sca" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-                    
-                    <iframe id="ytplayer" type="text/html" src="https://www.youtube.com/embed/SvkYuJ2lNms?autoplay=1&loop=1&modestbranding=1&playsinline=1&color=red&iv_load_policy=3&playlist=SvkYuJ2lNms" frameborder="0" allowfullscreen></iframe>
-                    
-                    <p id="lyrics">when my love for life is running dry,<br />
-                        You come and pour yourself on me.<br />
-                        -<b>Thank you my dear</b> <img src="kiss.svg"></p>
-                    
-                 <p><i class="fa fa-heart" style="color:#992600;"></i> created by Grace <i class="fa fa-heart" style="color:#992600;"></i></p>   
-                    
-          </div>
-          
+                    <div id="text">Thank you dear Rob...<br/>big hugs and kisses...</i><br/>I will see you soon ...<img src="kiss.svg" width="50px;"></div>
+                    <div id="countdown" class="glow"></div>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3145.604644774317!2d-123.18457169747118!3d49.19667089632452!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54860b348627a39b%3A0xba68ccac86348084!2sVancouver%20International%20Airport!5e0!3m2!1sen!2sca!4v1637613938095!5m2!1sen!2sca" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    <p><i class="fa fa-heart" style="color:#992600;"></i> created by Grace <i class="fa fa-heart" style="color:#992600;"></i></p>
+          </div> 
 
 <script>
 var countDownDate = new Date("Nov 30, 2021 14:30:00").getTime();
