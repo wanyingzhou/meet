@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
 <head>
 <meta charset="utf-8">
@@ -15,8 +16,12 @@
 
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Caveat">
 
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Inline+Text:wght@700&family=Libre+Barcode+128+Text&display=swap" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      
 
 <link rel="icon" type="image/svg+xml" href="media/zwy_favicon.svg">
 
@@ -24,17 +29,22 @@
           
 <style>
 
-* {
-  box-sizing: border-box;
-}
 
 body {
+  position: relative;
   margin: 0;
-  font-family: Helvetica Neue,Helvetica,Arial;
-  text-align: center;
+  font-family: "Helvetica Neue", Arial, sans-serif;
   color: white;
-  padding: 100px 30px;
- }
+  text-align: center;
+}
+
+
+body::after {
+  content: '';
+  display: block;
+  height: 20px; /* Set same as footer's height */
+}
+
 
 #myVideo {
   position: fixed;
@@ -60,6 +70,7 @@ body {
   }
   
   #content {
+  margin: 80px auto 50px auto;
   display: block;
   justify-content: center;
   align-items: center;
@@ -73,12 +84,14 @@ body {
   #countdown {
   margin-top: 30px;
   font-size: 4rem;
-  font-weight: bold;
+  font-weight: 400;
+  line-height: 6rem;
+  font-family: 'Big Shoulders Inline Text', cursive;
   }
   
     
 #ytplayer {
-  margin-top: 50px;
+  margin-top: 30px;
   width: 65%;
   height: 250px;
   }
@@ -148,6 +161,22 @@ width: 200px;
   }
 }
 
+
+.footer {
+   position: absolute;
+   bottom: 0;
+   width: 100%;
+   height: 20px;
+   background-color: rgba(0, 0, 0, 0.2);
+   font-family: 'Big Shoulders Inline Text', cursive;
+   font-family: 'Libre Barcode 128 Text', cursive;
+   font-size: 1.5rem;
+   opacity: 0.5;
+   padding: 15px;
+   }
+   
+   
+  
 </style>
 </head>
 
@@ -185,7 +214,9 @@ width: 200px;
                     <img id="logo" src="media/zwy.svg" />
                     
                     
-          </div> 
+          </div>
+          
+          <div class="footer">Almost before we knew it, we had left the ground.</div>
 
 <script>
 var countDownDate = new Date("Jan 01, 2022 00:00:00").getTime();
@@ -199,7 +230,7 @@ var x = setInterval(function() {
   var seconds = Math.floor((distance % (1000 * 60)) / 1000);
     
   
-  document.getElementById("countdown").innerHTML = "WISHING A GOOD START OF A NEW YEAR" + "<br />" + days + "d " + hours + "h "
+  document.getElementById("countdown").innerHTML = "Wishing a Bright New Year" + "<br />" + days + "d " + hours + "h "
   + minutes + "m " + seconds + "s ";
     
    
